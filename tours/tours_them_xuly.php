@@ -2,10 +2,8 @@
     require_once '../config.php';
 
     $TieuDe = $_POST['TieuDe'];
-    $GiaGiam = $_POST['GiaGiam'];
+    $GiaGoc = $_POST['GiaGoc'];
     $Gia = $_POST['Gia'];
-    //$HinhAnh = $_FILES['HinhAnh']['name'];
-    //$HinhAnh_tmp = $_FILES['HinhAnh']['tmp_name'];
     $NoiDung = $_POST['NoiDung'];
     $DanhMuc = $_POST['DanhMuc'];
     try
@@ -15,20 +13,18 @@
         //$MaNguoiDung = $_SESSION['ID'];
         // Kiểm quyệt
         //$KiemDuyet = $_SESSION['QuyenHan'] == 1 ? 1 : 0;
-        $sql = 'INSERT INTO sanpham(tieude, giagiam, gia, noidung, danhmuc)
-                VALUES (:TieuDe, :GiaGiam, :Gia, :NoiDung, :DanhMuc)';
+        $sql = 'INSERT INTO tours(TieuDe, GiaGoc, Gia, NoiDung, NgayDang, DanhMuc)
+                VALUES (:TieuDe, :GiaGoc, :Gia, :NoiDung, :NgayDang, :DanhMuc)';
         $cmd = $conn->prepare($sql);
         $cmd->bindValue(':TieuDe', $TieuDe);
-        $cmd->bindValue(':GiaGiam', $GiaGiam);
+        $cmd->bindValue(':GiaGoc', $GiaGoc);
         $cmd->bindValue(':Gia', $Gia);
-       // $cmd->bindValue(':HinhAnh', $HinhAnh);
         $cmd->bindValue(':NoiDung', $NoiDung);
+        $cmd->bindValue(':NgayDang', date('Y-m-d H:i:s')); // Lấy giờ hiện tại của server
         $cmd->bindValue(':DanhMuc', $DanhMuc);
         $result = $cmd->execute();
         
-   
-
-        include_once 'tours.php';
+        include_once 'tours_quanly.php';
     }
     catch(PDOException $e)
     {

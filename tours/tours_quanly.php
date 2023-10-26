@@ -17,7 +17,7 @@
         <div class= "card-header">Tours</div>
         <div class="card-body">
             <?php
-                $sql = 'SELECT * FROM sanpham';
+                $sql = 'SELECT * FROM tours';
                 $cmd = $conn->prepare($sql);
                 $cmd->execute(); 
                 $result = $cmd->fetchAll();
@@ -28,10 +28,7 @@
                 <tr>
                     <th width="5%">#</th>
                     <th>Tiêu đề</th>
-                    <th>Giá giảm</th>
                     <th>Giá</th>
-                    <th>Hình ảnh</th>
-                    <th>Nội dung</th>
                     <th>Danh mục</th>
                     <th width="5%">Sửa</th>
                     <th width="5%">Xóa</th>
@@ -44,14 +41,11 @@
                 {
                     echo '<tr>
                             <td>' .$stt++ . '</td>
-                            <td>'.$value['tieude'] . '</td>
-                            <td>'.$value['giagiam'] . '</td>
-                            <td>'.$value['gia'] . '</td>
-                            <td>'.$value['hinhanh'] . '</td>
-                            <td>'.$value['noidung'] . '</td>
-                            <td>'.$value['danhmuc'] . '</td>
-                            <td class="text-center"><a href="chude_sua.php?id=' . $value['id'] . '"><i class="bi bi-pencil-square"></i></a></td>
-                            <td class="text-center"><a href="tours_xoa.php?id=' . $value['id'] . '" onclick="return confirm(\'Bạn muốn xóa chủ đề '.$value['tieude'].' không?\')"><i class="bi bi-trash text-danger"></i></a></td>
+                            <td>'.$value['TieuDe'] . '</td>
+                            <td>'.$value['Gia'] . '</td>
+                            <td>'.$value['DanhMuc'] . '</td>
+                            <td class="text-center"><a href="tours_sua.php?id=' . $value['ID'] . '"><i class="bi bi-pencil-square"></i></a></td>
+                            <td class="text-center"><a href="tours_xoa.php?id=' . $value['ID'] . '" onclick="return confirm(\'Bạn muốn xóa chủ đề '.$value['TieuDe'].' không?\')"><i class="bi bi-trash text-danger"></i></a></td>
                         <tr>';
                 }
                 ?>
