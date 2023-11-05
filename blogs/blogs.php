@@ -21,7 +21,32 @@ include_once '../thuvien.php';
                 <div class="col-8">
                     <h2>Danh sách blogs</h2>
                     <?php
-                    $sql = 'SELECT * FROM doan.noidungtin n, doan.nguoidung nd WHERE n.MaNguoiDung = nd.MaNguoiDung';
+                    $sql1 = "select count(MaBaiViet) as total from noidungtin";
+
+                    $danhsach = $conn->query($sql1);
+
+
+                    $row1 = $danhsach->fetch();
+
+                    $total_records = $row1['total'];
+
+
+
+                    $current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+                    $limit = 2;
+
+                    $total_page = ceil($total_records / $limit);
+
+                    if ($current_page > $total_page) {
+                        $current_page = $total_page;
+                    } else if ($current_page < 1) {
+                        $current_page = 1;
+                    }
+
+                    //tìm start
+                    $start = ($current_page - 1) * $limit;
+
+                    $sql = "SELECT * FROM noidungtin n, nguoidung nd WHERE n.MaNguoiDung = nd.MaNguoiDung LIMIT $start, $limit";
                     $cmd = $conn->prepare($sql);
                     $cmd->execute();
                     $result = $cmd->fetchAll();
@@ -36,7 +61,7 @@ include_once '../thuvien.php';
                                             <h5 class="card-title">' . $blog['TieuDe'] . '</h5>
                                             <p class="card-text">' . $blog['TomTat'] . '</p>
                                             <p class="card-text"><small class="text-body-secondary"><time class="timeago" datetime="' . (DinhDangNgayGio($blog['NgayDang'])) . '"></time></small></p>
-                                            <p class="card-text"><small class="text-body-secondary"> '.$blog['TenNguoiDung'].'</small><p>
+                                            <p class="card-text"><small class="text-body-secondary"> ' . $blog['TenNguoiDung'] . '</small><p>
                                         </div>
                                     </div>
                                 </div>
@@ -45,21 +70,48 @@ include_once '../thuvien.php';
                     ?>
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
+
+                            <?php
+                            if ($current_page > 1 && $total_page > 1)
+                                echo '<li class="page-item">
+                                    <a class="page-link" href="blogs.php?page=' . ($current_page - 1) . '">Previous</a>
+                                </li>';
+
+                            for ($i = 1; $i <= $total_page; $i++) {
+                                if ($i != $current_page) {
+                                    echo ' <li class="page-item"><a class="page-link" href="blogs.php?page= ' . $i . '">' . $i . '</a></li>';
+                                } else {
+                                    echo '<li class="page-item"><a class="page-link" href="#">' . $i . '</a></li>';
+                                }
+                            }
+
+                            if ($current_page < $total_page && $total_page > 1) {
+                                echo '<li class="page-item">
+                                    <a class="page-link" href="blogs.php?page= ' . ($current_page + 1) . '" >Next</a>
+                                </li>';
+                            }
+                            ?>
+
                         </ul>
                     </nav>
                 </div>
 
                 <div class="col-4">
                     <h5>Blogs Nổi Bật</h5>
+                    <div class="card  mt-3" style="width: 100%;">
+                        <div class="card-body">
+                            <?php
+                                $sql2 = "SELECT * FROM noidungtin ORDER BY LuotXem LIMIT 2";
+                                $cmd2 = $conn->prepare($sql2);
+                                $cmd2->execute();
+                                $result1 = $cmd2->fetchAll();
+                                foreach ($result1 as $blognd) {
+                                    echo '<p class="card-title mt-3">'. $blognd['TieuDe'].'</p>
+                                    <a href="baiviet_chitiet.php?id='.$blognd['MaBaiViet'].'" class="btn btn-primary">Chi Tiết</a>';
+                                }
+                            ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
