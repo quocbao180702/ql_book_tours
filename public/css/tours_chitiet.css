@@ -1,0 +1,35 @@
+
+/*CSS cho phan giua*/
+#main{
+  
+    width: 90%;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: auto;
+  }
+  #left{
+    width: 40%;
+    min-height: 200px;
+    float: left;
+    margin-bottom: 5%;
+  }
+  #right{
+    width: 45%;
+    min-height: 200px;
+    float: right;
+    margin-bottom: 5%;
+    margin-right: 10%;
+  }
+  
+  #bottom{
+    height: 20%;
+    clear: both;
+    margin-right: 10%;
+  }
+  p
+  {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-indent: 5%;
+  }

@@ -10,6 +10,7 @@
     <title>Tours</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="../public/css/tours.css" rel="stylesheet" />
 </head>
   <body>
   <?php //include_once"navbar.php"; ?>
@@ -30,9 +31,6 @@
                             foreach($chilldArray as $value)
                             echo '<article class="card mb-4">
                                     <header class="card-header">
-                                      <div class="card-meta">
-                                        <a href="#"><time class="timeago" datetime="'. $value['NgayDang'].'"></time></a><a href="page-category.html"></a>
-                                      </div>
                                         <a href="tours_chitiet.php?id=' . $value['ID'] . '">
                                           <h4 class="card-title">'. $value['TieuDe'] . '</h4>
                                         </a>
@@ -40,12 +38,12 @@
                                       <a href="tours_chitiet.php?id=' . $value['ID'] . '">
                                         <img class="card-img" src="'.LayHinhDauTien($value['NoiDung']).'" alt="" />
                                       </a>
-                                      <div class="card-body">
-                                        <p class="card-text">'. $value['GiaGoc'] .'</p>
-                                      </div>
-                                      <div class="card-body">
-                                        <p class="card-text">'. $value['Gia'] .'</p>
-                                      </div>
+                                      <a href="tours_chitiet.php?id=' . $value['ID'] . '">
+                                        <p class="card-text">Giá Giảm: '. $value['GiaGoc'] .' VNĐ</p>
+                                      </a>
+                                      <a href="tours_chitiet.php?id=' . $value['ID'] . '">
+                                        <p class="card-text">Giá: '. $value['Gia'] .' VNĐ</p>
+                                      </a>
                                     </article>';
                         echo '</div>';
                     }
