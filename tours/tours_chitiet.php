@@ -23,22 +23,23 @@ require_once '../thuvien.php';
         $cmdTourChiTiet->execute();
         $TourChiTiet = $cmdTourChiTiet->fetch();
         echo '<div id="main">';
-            echo ' <div id="left">
+        echo ' <div id="left">
                         <img src="' . LayHinhDauTien($TourChiTiet['NoiDung']) . '" alt="Image" width="100%" height="100%" />
                     </div>';
-            echo '<div id="right">
+        echo '<div id="right">
                         <p>' . $TourChiTiet['TieuDe'] . '</p>
                         <p>Giá giảm: ' . $TourChiTiet['GiaGoc'] . ' VNĐ</p>
                         <p>Giá: ' . $TourChiTiet['Gia'] . ' VNĐ</p>
                         <button>Đặt</button>
-                    </div>'; 
-            echo '  <div id="bottom">
+                    </div>';
+        echo '  <div id="bottom">
                         <p>Mô Tả Du Lịch</p>
                         <p>' . $TourChiTiet['NoiDung'] . '</p>
                     </div>';
         echo '</div>';
         ?>
-        </div>
+    </div>
     </div>
 </body>
+
 </html>
