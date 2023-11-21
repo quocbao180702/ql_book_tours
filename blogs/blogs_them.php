@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="container">
+    <?php include_once '../navbar.php'; ?>
         <div class="card my-5">
           <div class="card-header">
             Thêm Bài viết
@@ -37,6 +38,7 @@
                     <textarea class="form-control" id="NoiDung" name="NoiDung" required></textarea>
                     <div class="invalid-feedback">Nội dung bài viết không được bỏ trống.</div>
                 </div>
+                
               <div class="text-center w-100">
                 <button type="submit" class="btn btn-primary text-center">Thêm chủ đề</button>
               </div>

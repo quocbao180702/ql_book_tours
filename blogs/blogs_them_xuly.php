@@ -9,8 +9,8 @@
     {
     
     // Mã người dùng
-  /*   $MaNguoiDung = $_SESSION['ID']; */
-        $MaNguoiDung = 1;
+    $MaNguoiDung = $_SESSION['ID'];
+        /* $MaNguoiDung = 1; */
     
     // Kiểm quyệt
     /* 

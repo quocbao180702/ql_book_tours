@@ -1,7 +1,9 @@
-
+<?php
+	 include_once 'config.php';
+?>
 <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="light">
 	<div class="container-fluid">
-			<a class="navbar-brand" href="index.php"><i class="bi bi-star-fill"></i> Tour </a>
+			<a class="navbar-brand" href="/index.php"><i class="bi bi-star-fill"></i> Tour </a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 		 </button>
@@ -26,7 +28,7 @@
 							 <li><a class="dropdown-item" href="chude.php"><i class="bi bi-diagram-2"></i> Chủ đề</a></li>
 							 <li><a class="dropdown-item" href="nguoidung.php"><i class="bi bi-people"></i> Người dùng</a></li>
 							 <li><hr class="dropdown-divider"></li>
-							 <li><a class="dropdown-item" href="baiviet.php"><i class="bi bi-stickies"></i> Bài viết</a></li>
+							 <li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-stickies"></i> Bài viết</a></li>
 						 </ul>
 						 </li>
 					 <?php
@@ -57,10 +59,10 @@
 						{
 					 ?>
 						 <li class="nav-item">
-							<a class="nav-link" href="dangki.php"><i class="bi bi-person-plus"></i> Đăng ký</a>
+							<a class="nav-link" href="/dangky/dangky.php"><i class="bi bi-person-plus"></i> Đăng ký</a>
 						 </li>
 						<li class="nav-item">
-							<a class="nav-link" href="dangnhap.php"><i class="bi bi-box-arrow-in-right"></i> Đăng nhập</a>
+							<a class="nav-link" href="/dangnhap/dangnhap.php"><i class="bi bi-box-arrow-in-right"></i> Đăng nhập</a>
 						 </li>
 					 <?php
 						}			
