@@ -18,7 +18,6 @@ include_once '../thuvien.php';
     <div class="container">
     <?php include_once '../navbar.php'; ?>
         <div class="card">
-            <?php include_once '../timkiem/timkiem.php'; ?>
             <div class="row">
                 <div class="col-8">
                     <h2>Danh sách blogs</h2>

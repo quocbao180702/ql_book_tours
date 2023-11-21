@@ -8,7 +8,7 @@ try {
     $sql = 'SELECT * FROM nguoidung WHERE TenDangNhap = :TenDangNhap AND MatKhau = :MatKhau';
     $cmd = $conn->prepare($sql);
     $cmd->bindValue(':TenDangNhap', $TenDangNhap);
-    $cmd->bindValue(':MatKhau', $MatKhau);
+    $cmd->bindValue(':MatKhau', sha1($MatKhau));
     $cmd->execute();
     $result = $cmd->fetch();
 
