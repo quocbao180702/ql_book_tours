@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<?php include_once "navbar.php"; ?>
+			<?php include_once "navbar/navbar.php"; ?>
 			
 			<div class="card mt-3">
 				<h5 class="card-header">Đăng ký tài khoản</h5>
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			
-			<?php include_once "footer.php"; ?>
+			<?php include_once "footer/footer.php"; ?>
 		</div>
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

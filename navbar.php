@@ -10,6 +10,14 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#"><i class="bi bi-cup-hot"></i> Tin mới nhất</a>
 				</li>
+				<li class="nav-item">
+                    <button class="btn btn-link nav-link" onclick="location.href='sanpham.php'"><i class="bi bi-box"></i> Sản phẩm</button>
+                </li>
+
+                <!-- Add button for "Blog" -->
+                <li class="nav-item">
+                    <button class="btn btn-link nav-link" onclick="location.href='blogs.php'"><i class="bi bi-journal"></i> Blog</button>
+                </li>
 				 <?php
 				 
 				if(isset($_SESSION['ID'])) // Nếu đã đăng nhập
@@ -39,8 +47,8 @@
 								<i class="bi bi-person-circle"></i> <?php echo $_SESSION['HoVaTen']; ?>
 							 </a>
 							<ul class="dropdown-menu">
-								 <li><a class="dropdown-item" href="baiviet_them.php"><i class="bi bi-pencil-square"></i> Đăng bài viết</a></li>
-								 <li><a class="dropdown-item" href="baiviet_cuatoi.php"><i class="bi bi-person-badge"></i> Bài viết của tôi</a></li>
+								 <li><a class="dropdown-item" href="blogs/blogs_them.php"><i class="bi bi-pencil-square"></i> Đăng bài viết</a></li>
+								 <li><a class="dropdown-item" href="blogs/myBlogs.php"><i class="bi bi-person-badge"></i> Bài viết của tôi</a></li>
 								 <li><hr class="dropdown-divider"></li>
 								 <li><a class="dropdown-item" href="nguoidung_doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
 							 </ul>
@@ -57,10 +65,10 @@
 						{
 					 ?>
 						 <li class="nav-item">
-							<a class="nav-link" href="dangki.php"><i class="bi bi-person-plus"></i> Đăng ký</a>
+							<a class="nav-link" href="dangki/dangki.php"><i class="bi bi-person-plus"></i> Đăng ký</a>
 						 </li>
 						<li class="nav-item">
-							<a class="nav-link" href="dangnhap.php"><i class="bi bi-box-arrow-in-right"></i> Đăng nhập</a>
+							<a class="nav-link" href="dangnhap/dangnhap.php"><i class="bi bi-box-arrow-in-right"></i> Đăng nhập</a>
 						 </li>
 					 <?php
 						}			
