@@ -17,7 +17,7 @@
     <div class="container">
         <div class="card-body">
           <div class="row">
-            <div class="col-9">
+            <div class="col">
               <div class="row">
                 <?php
                   $sqlTours = 'SELECT * FROM tours WHERE id ORDER BY NgayDang DESC LIMIT 12';

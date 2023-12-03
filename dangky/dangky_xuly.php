@@ -18,7 +18,7 @@ try {
     $result = $cmd->execute();
 
     $message = 'Đăng ký thành công!';
-    include_once 'success.php';
+    include_once '../success.php';
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
