@@ -30,7 +30,10 @@ require_once '../thuvien.php';
                         <p>' . $TourChiTiet['TieuDe'] . '</p>
                         <p>Giá giảm: ' . $TourChiTiet['GiaGoc'] . ' VNĐ</p>
                         <p>Giá: ' . $TourChiTiet['Gia'] . ' VNĐ</p>
-                        <button>Đặt</button>
+                        <form action="/cart/xuly_shopping.php" method="POST">
+                            <input type="text" class="form-control" id="IdTour" name="IdTour" value="'.$TourChiTiet['ID'] .'" hidden/>
+                            <button type="submit" class="btn btn-primary"><i class="bi bi-floppy"></i> Đăt Hàng </button>
+                        </form>
                     </div>';
         echo '  <div id="bottom">
                         <p>Mô Tả Du Lịch</p>
