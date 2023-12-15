@@ -76,8 +76,8 @@
                                     <div class="product-card text-center">
                                     <img src="'.LayHinhDauTien($value['NoiDung']) .'" class="img-fluid product-image" alt="Product 2" height="200px">
                                     <h4>' . $value['TieuDe'] . '</h4>
-                                    <p>' . $value['Gia'] . '</p>
-                                    <a class = "btn btn-primary" href="tours_chitiet.php?id=' . $value['ID'] . '">
+                                    <p>Giá: ' . $value['Gia'] . ' VNĐ</p>
+                                    <a class = "btn btn-primary" href="tours/tours_chitiet.php?id=' . $value['ID'] . '">
                                         <p class="card-text">Chi Tiết</p>
                                     </a>
                                     </div>

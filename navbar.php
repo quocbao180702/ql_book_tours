@@ -75,8 +75,8 @@ include_once 'config.php';
 				?>
 				
 			</ul>
-			<form class="d-flex" role="search">
-				<input class="form-control me-2" type="search" placeholder="Bạn muốn tìm gì?" aria-label="Search" />
+			<form class="d-flex" role="search" action="../tours/tours_timkiem.php" method="POST">
+				<input class="form-control me-2" type="search" name="tukhoa" placeholder="Bạn muốn tìm gì?" aria-label="Search" />
 				<button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
 			</form>
 		</div>
