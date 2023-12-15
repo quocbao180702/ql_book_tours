@@ -17,6 +17,11 @@ require_once '../thuvien.php';
 <body>
     <div id="khungtrang">
     <?php include_once '../navbar.php'; ?>
+        <div class="text-center">
+                <hr />
+                <h3>Thông tin chi tiết Tousr</h3>
+                <hr />
+            </div>
         <?php
         $id = $_GET['id'];
         $sqlTourChiTiet = "SELECT * FROM tours WHERE id = $id";

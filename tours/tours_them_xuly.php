@@ -9,10 +9,6 @@
     try
     {
 
-        // Mã người dùng
-        //$MaNguoiDung = $_SESSION['ID'];
-        // Kiểm quyệt
-        //$KiemDuyet = $_SESSION['QuyenHan'] == 1 ? 1 : 0;
         $sql = 'INSERT INTO tours(TieuDe, GiaGoc, Gia, NoiDung, NgayDang, DanhMuc)
                 VALUES (:TieuDe, :GiaGoc, :Gia, :NoiDung, :NgayDang, :DanhMuc)';
         $cmd = $conn->prepare($sql);

@@ -20,6 +20,7 @@ require_once '../thuvien.php';
         <?php include_once '../navbar.php'; ?>
         <div class="card-body">
             <div class="text-center">
+                <hr />
                 <h3>Kết quả tìm kiếm</h3>
                 <hr />
             </div>

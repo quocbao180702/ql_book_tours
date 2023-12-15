@@ -17,6 +17,11 @@
     <div class="container">
     <?php include_once '../navbar.php'; ?>
         <div class="card-body">
+        <div class="text-center">
+                <hr />
+                <h3>Danh sách Tours</h3>
+                <hr />
+            </div>
           <div class="row">
             <div class="col">
               <div class="row">

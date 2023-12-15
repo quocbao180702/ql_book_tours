@@ -14,8 +14,7 @@ require_once '../config.php';
 
 <body>
   <div class="container">
-    <?php //include_once"navbar.php"; 
-    ?>
+    <?php include_once '../navbar.php'; ?>
     <div class="card mt-3">
       <div class="card-header">Thêm Tours</div>
       <div class="card-body">
@@ -42,8 +41,13 @@ require_once '../config.php';
           </div>
           <div class="mb-3">
             <label for="DanhMuc" class="form-label">Danh Mục</label>
-            <input type="number" class="form-control" id="DanhMuc" name="DanhMuc" required />
-            <div class="invalid-feedback">Danh mục không được bỏ trống.</div>
+            <select class="form-select" id="DanhMuc" name="DanhMuc" required>
+              <option value="" selected disabled>-- Chọn miền --</option>
+              <option value="1">Miền Bắc</option>
+              <option value="2">Miền Trung</option>
+              <option value="3">Miền Nam</option>
+            </select>
+            <div class="invalid-feedback">Vui lòng chọn miền.</div>
           </div>
           <button type="submit" class="btn btn-primary"><i class="bi bi-floppy"></i> Thêm vào CSDL</button>
         </form>

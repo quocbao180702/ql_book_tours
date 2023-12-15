@@ -14,21 +14,20 @@ require_once '../config.php';
 
 <body>
     <div class="container">
-        <?php //include_once"navbar.php"; 
-        ?>
+        <?php include_once '../navbar.php'; ?>
         <div class="card mt-3">
             <div class="card-header">Sửa Tours</div>
             <div class="card-body">
                 <?php
-                    $id = $_GET['id'];
-                    $sql = 'SELECT * FROM tours WHERE ID = :ID';
-                    $cmd = $conn->prepare($sql);
-                    $cmd->bindValue(':ID', $id);
-                    $cmd->execute();
-                    $result = $cmd->fetch();
+                $id = $_GET['id'];
+                $sql = 'SELECT * FROM tours WHERE ID = :ID';
+                $cmd = $conn->prepare($sql);
+                $cmd->bindValue(':ID', $id);
+                $cmd->execute();
+                $result = $cmd->fetch();
                 ?>
                 <form action="tours_sua_xuly.php" method="post" class="needs-validation" novalidate>
-                <input type = "hidden" id="ID" name="ID" value="<?php echo $result['ID']; ?>" required />
+                    <input type="hidden" id="ID" name="ID" value="<?php echo $result['ID']; ?>" required />
                     <div class="mb-3">
                         <label for="TieuDe" class="form-label">Tiêu đề tour</label>
                         <input type="text" class="form-control" id="TieuDe" name="TieuDe" value="<?php echo $result['TieuDe']; ?>" required />
@@ -51,8 +50,13 @@ require_once '../config.php';
                     </div>
                     <div class="mb-3">
                         <label for="DanhMuc" class="form-label">Danh Mục</label>
-                        <input type="number" class="form-control" id="DanhMuc" name="DanhMuc" value="<?php echo $result['DanhMuc']; ?>" required />
-                        <div class="invalid-feedback">Danh mục không được bỏ trống.</div>
+                        <select class="form-select" id="DanhMuc" name="DanhMuc" required>
+                            <option value="" selected disabled>-- Chọn miền --</option>
+                            <option value="1" <?php echo ($result['DanhMuc'] == 1) ? 'selected' : ''; ?>>Miền Bắc</option>
+                            <option value="2" <?php echo ($result['DanhMuc'] == 2) ? 'selected' : ''; ?>>Miền Trung</option>
+                            <option value="3" <?php echo ($result['DanhMuc'] == 3) ? 'selected' : ''; ?>>Miền Nam</option>
+                        </select>
+                        <div class="invalid-feedback">Vui lòng chọn miền.</div>
                     </div>
                     <button type="submit" class="btn btn-primary"><i class="bi bi-floppy"></i> Cập nhật</button>
                 </form>
