@@ -13,8 +13,9 @@
     <link href="../public/css/tours.css" rel="stylesheet" />
 </head>
   <body>
-  <?php //include_once"navbar.php"; ?>
+  
     <div class="container">
+    <?php include_once '../navbar.php'; ?>
         <div class="card-body">
           <div class="row">
             <div class="col">

@@ -49,6 +49,8 @@ include_once 'config.php';
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="/blogs/blogs_them.php"><i class="bi bi-pencil-square"></i> Đăng bài viết</a></li>
 								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-person-badge"></i> Bài viết của tôi</a></li>
+								<li><a class="dropdown-item" href="/tours/tours_quanly.php"><i class="bi bi-person-badge"></i> Quản lý tour</a></li>
+								<li><a class="dropdown-item" href="/tours/tours_them.php"><i class="bi bi-person-badge"></i> Thêm tour</a></li>
 								<li>
 									<hr class="dropdown-divider">
 								</li>
