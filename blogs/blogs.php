@@ -55,14 +55,14 @@ include_once '../thuvien.php';
                         echo '<div class="card mb-3" style="width:100%; max-height: 240px;">
                                 <div class="row g-0">
                                     <div class="col-md-2">
-                                        <img src="/public/images/1-1.jpg" class="img-fluid rounded-start" alt="..." style="max-height: 240px; width: auto;">
+                                        <img src="'.LayHinhDauTien($blog['NoiDung']).'" class="img-fluid rounded-start" alt="..." style="max-height: 240px; width: auto;">
                                     </div>
                                     <div class="col-md-10">
                                         <div class="card-body">
                                             <h5 class="card-title">' . $blog['TieuDe'] . '</h5>
                                             <p class="card-text">' . $blog['TomTat'] . '</p>
-                                            <p class="card-text"><small class="text-body-secondary"><time class="timeago" datetime="' . (DinhDangNgayGio($blog['NgayDang'])) . '"></time></small></p>
                                             <p class="card-text"><small class="text-body-secondary"> ' . $blog['TenNguoiDung'] . '</small><p>
+                                            <a class="btn btn-primary text-center" href="blogs_chitiet.php?id=' . $blog['MaBaiViet'] . '">Chi tiết</a>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ include_once '../thuvien.php';
                                 $result1 = $cmd2->fetchAll();
                                 foreach ($result1 as $blognd) {
                                     echo '<p class="card-title mt-3">'. $blognd['TieuDe'].'</p>
-                                    <a href="baiviet_chitiet.php?id='.$blognd['MaBaiViet'].'" class="btn btn-primary">Chi Tiết</a>';
+                                    <a href="blogs_chitiet.php?id='.$blognd['MaBaiViet'].'" class="btn btn-primary">Chi Tiết</a>';
                                 }
                             ?>
                         </div>

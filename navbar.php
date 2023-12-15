@@ -10,9 +10,6 @@ include_once 'config.php';
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="bi bi-cup-hot"></i> Tin mới nhất</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link" href="/blogs/blogs.php"><i class="bi bi-cup-hot"></i>Blogs</a>
 				</li>
 				<li class="nav-item">
@@ -31,12 +28,15 @@ include_once 'config.php';
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								<i class="bi bi-database-gear"></i> Quản lý</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="chude.php"><i class="bi bi-diagram-2"></i> Chủ đề</a></li>
-								<li><a class="dropdown-item" href="nguoidung.php"><i class="bi bi-people"></i> Người dùng</a></li>
+								<li><a class="dropdown-item" href="/blogs/blogs_them.php"><i class="bi bi-pencil-square"></i> Đăng bài viết</a></li>
+								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-person-badge"></i> Bài viết của tôi</a></li>
+								<li><a class="dropdown-item" href="/tours/tours_quanly.php"><i class="bi bi-person-badge"></i> Quản lý tour</a></li>
+								<li><a class="dropdown-item" href="/tours/tours_them.php"><i class="bi bi-person-badge"></i> Thêm tour</a></li>
 								<li>
 									<hr class="dropdown-divider">
 								</li>
 								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-stickies"></i> Bài viết</a></li>
+								<li><a class="dropdown-item" href="/doimatkhau/doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
 							</ul>
 						</li>
 					<?php
@@ -47,14 +47,11 @@ include_once 'config.php';
 								<i class="bi bi-person-circle"></i> <?php echo $_SESSION['HoVaTen']; ?>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="/blogs/blogs_them.php"><i class="bi bi-pencil-square"></i> Đăng bài viết</a></li>
-								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-person-badge"></i> Bài viết của tôi</a></li>
-								<li><a class="dropdown-item" href="/tours/tours_quanly.php"><i class="bi bi-person-badge"></i> Quản lý tour</a></li>
-								<li><a class="dropdown-item" href="/tours/tours_them.php"><i class="bi bi-person-badge"></i> Thêm tour</a></li>
+
 								<li>
 									<hr class="dropdown-divider">
 								</li>
-								<li><a class="dropdown-item" href="nguoidung_doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
+								<li><a class="dropdown-item" href="doimatkhau/doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
 							</ul>
 						</li>
 					<?php
