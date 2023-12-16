@@ -58,8 +58,8 @@ require_once '../config.php';
             </div>
         </div>
         <hr>
-        <?php include_once "../footer.php"; ?>
     </div>
+    <?php include_once "../footer.php"; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>

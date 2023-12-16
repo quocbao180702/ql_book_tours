@@ -243,9 +243,11 @@ require_once '../config.php';
 			</div>
 		</div>
 	</footer> -->
-	<?php
-	include_once '../footer.php';
-	?>
+	<div style="position: fixed;
+    				bottom: 0;
+    				width: 100%;">
+			<?php include_once "../footer.php"; ?>
+		</div>
 
 	<a class="btn-scroll-top" href="#top" data-scroll>
 		<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>

@@ -45,8 +45,8 @@
             </form>
           </div>
         </div>
-        <?php include_once "../footer.php"; ?>
-    </div>
+      </div>
+      <?php include_once "../footer.php"; ?>
     <script src="ckeditor5/ckeditor.js"></script>
     <script>
         ClassicEditor.create(document.querySelector('#NoiDung'), {

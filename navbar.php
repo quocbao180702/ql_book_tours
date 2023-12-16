@@ -3,17 +3,17 @@ include_once 'config.php';
 ?>
 <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="light">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/index.php"><i class="bi bi-star-fill"></i> Tour </a>
+		<a class="navbar-brand" href="/index.php">Team 11</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" href="/blogs/blogs.php"><i class="bi bi-cup-hot"></i>Blogs</a>
+					<a class="nav-link" href="/blogs/blogs.php"></i>Blogs</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/tours/tours.php"><i class="bi bi-cup-hot"></i>Tours</a>
+					<a class="nav-link" href="/tours/tours.php"></i>Tours</a>
 				</li>
 				<?php
 
@@ -28,17 +28,17 @@ include_once 'config.php';
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 								<i class="bi bi-database-gear"></i> Quản lý</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="/blogs/blogs_them.php"><i class="bi bi-pencil-square"></i> Đăng bài viết</a></li>
-								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-person-badge"></i> Bài viết của tôi</a></li>
-								<li><a class="dropdown-item" href="/tours/tours_quanly.php"><i class="bi bi-person-badge"></i> Quản lý tour</a></li>
-								<li><a class="dropdown-item" href="/tours/tours_them.php"><i class="bi bi-person-badge"></i> Thêm tour</a></li>
+								<li><a class="dropdown-item" href="/blogs/blogs_them.php"> Đăng bài viết</a></li>
+								<li><a class="dropdown-item" href="/blogs/myBlogs.php"> Bài viết của tôi</a></li>
+								<li><a class="dropdown-item" href="/tours/tours_quanly.php"> Quản lý tour</a></li>
+								<li><a class="dropdown-item" href="/tours/tours_them.php"> Thêm tour</a></li>
 								<li>
 									<hr class="dropdown-divider">
 								</li>
-								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-stickies"></i> Bài viết</a></li>
-								<li><a class="dropdown-item" href="/cart/cart.php"><i class="bi bi-cup-hot"></i> Giỏ hàng</a></li>
-								<li><a class="dropdown-item" href="/cart/my_orders.php"><i class="bi bi-cup-hot"></i> Tour đã đặt</a></li>
-								<li><a class="dropdown-item" href="/doimatkhau/doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
+								<li><a class="dropdown-item" href="/blogs/myBlogs.php"> Bài viết</a></li>
+								<li><a class="dropdown-item" href="/cart/cart.php">Giỏ hàng</a></li>
+								<li><a class="dropdown-item" href="/cart/my_orders.php">Tour đã đặt</a></li>
+								<li><a class="dropdown-item" href="/doimatkhau/doimatkhau.php"> Đổi mật khẩu</a></li>
 							</ul>
 						</li>
 					<?php
@@ -53,26 +53,26 @@ include_once 'config.php';
 								<li>
 									<hr class="dropdown-divider">
 								</li>
-								<li><a class="dropdown-item" href="doimatkhau/doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
-								<li><a class="dropdown-item" href="/cart/cart.php"><i class="bi bi-cup-hot"></i> Giỏ hàng</a></li>
-								<li><a class="dropdown-item" href="/cart/my_orders.php"><i class="bi bi-cup-hot"></i> Tour đã đặt</a></li>
+								<li><a class="dropdown-item" href="doimatkhau/doimatkhau.php">Đổi mật khẩu</a></li>
+								<li><a class="dropdown-item" href="/cart/cart.php"> Giỏ hàng</a></li>
+								<li><a class="dropdown-item" href="/cart/my_orders.php">Tour đã đặt</a></li>
 							</ul>
 						</li>
 					<?php
 					}
 					?>
 					<li class="nav-item">
-						<a class="nav-link" href="/dangxuat.php"><i class="bi bi-box-arrow-right"></i> Đăng xuất</a>
+						<a class="nav-link" href="/dangxuat.php">Đăng xuất</a>
 					</li>
 				<?php
 				} else // Nếu chưa đăng nhập
 				{
 				?>
 					<li class="nav-item">
-						<a class="nav-link" href="/dangky/dangky.php"><i class="bi bi-person-plus"></i> Đăng ký</a>
+						<a class="nav-link" href="/dangky/dangky.php"> Đăng ký</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/dangnhap/dangnhap.php"><i class="bi bi-box-arrow-in-right"></i> Đăng nhập</a>
+						<a class="nav-link" href="/dangnhap/dangnhap.php"> Đăng nhập</a>
 					</li>
 				<?php
 				}

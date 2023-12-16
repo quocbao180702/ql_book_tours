@@ -46,6 +46,10 @@
 				</div>
 			</div>
 			
+		</div>
+		<div style="position: fixed;
+    				bottom: 0;
+    				width: 100%;">
 			<?php include_once "../footer.php"; ?>
 		</div>
 		

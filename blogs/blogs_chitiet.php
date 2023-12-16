@@ -43,8 +43,8 @@ include_once '../thuvien.php';
                 </div>';
         echo '</div>';
         ?>
-        <?php include_once "../footer.php"; ?>
     </div>
+    <?php include_once "../footer.php"; ?>
     
 </body>
 </html>
