@@ -209,6 +209,7 @@ require_once '../config.php';
 				</aside>
 			</div>
 		</div>
+			<?php include_once "../footer.php"; ?>
 	</main>
 
 	<!-- <footer class="footer bg-dark">
@@ -243,17 +244,6 @@ require_once '../config.php';
 			</div>
 		</div>
 	</footer> -->
-	<div style="position: fixed;
-    				bottom: 0;
-    				width: 100%;">
-			<?php include_once "../footer.php"; ?>
-		</div>
-
-	<a class="btn-scroll-top" href="#top" data-scroll>
-		<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-		<i class="btn-scroll-top-icon ci-arrow-up"></i>
-	</a>
-
 </body>
 
 </html>
