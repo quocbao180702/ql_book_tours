@@ -14,8 +14,7 @@ require_once '../config.php';
 
 <body>
     <div class="container">
-        <?php //include_once"navbar.php"; 
-        ?>
+    <?php include_once '../navbar.php'; ?>
         <div class="card mt-3">
             <div class="card-header">Tours</div>
             <div class="card-body">

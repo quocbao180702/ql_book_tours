@@ -36,6 +36,8 @@ include_once 'config.php';
 									<hr class="dropdown-divider">
 								</li>
 								<li><a class="dropdown-item" href="/blogs/myBlogs.php"><i class="bi bi-stickies"></i> Bài viết</a></li>
+								<li><a class="dropdown-item" href="/cart/cart.php"><i class="bi bi-cup-hot"></i> Giỏ hàng</a></li>
+								<li><a class="dropdown-item" href="/cart/my_orders.php"><i class="bi bi-cup-hot"></i> Tour đã đặt</a></li>
 								<li><a class="dropdown-item" href="/doimatkhau/doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
 							</ul>
 						</li>
@@ -52,6 +54,8 @@ include_once 'config.php';
 									<hr class="dropdown-divider">
 								</li>
 								<li><a class="dropdown-item" href="doimatkhau/doimatkhau.php"><i class="bi bi-key"></i> Đổi mật khẩu</a></li>
+								<li><a class="dropdown-item" href="/cart/cart.php"><i class="bi bi-cup-hot"></i> Giỏ hàng</a></li>
+								<li><a class="dropdown-item" href="/cart/my_orders.php"><i class="bi bi-cup-hot"></i> Tour đã đặt</a></li>
 							</ul>
 						</li>
 					<?php

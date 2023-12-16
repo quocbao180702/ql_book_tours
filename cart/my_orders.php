@@ -125,7 +125,7 @@
 									$userID = $_SESSION['ID'];
 									$sqlDonHang = 'SELECT * FROM donhang dh, donhang_chitiet ct, tours t WHERE dh.id = ct.donhang_id AND ct.user_id = t.ID AND dh.user_id = :UserID';
 									$cmdDonhang = $conn->prepare($sqlDonHang);
-									$cmd->bindParam(':UserID', $userID);
+									$cmdDonhang->bindParam(':UserID', $userID);
                   					$cmdDonhang->execute();
                   					$donhang = $cmdDonhang->fetchAll();
 									foreach($donhang as $dh){
