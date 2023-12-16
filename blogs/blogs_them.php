@@ -45,6 +45,7 @@
             </form>
           </div>
         </div>
+        <?php include_once "../footer.php"; ?>
     </div>
     <script src="ckeditor5/ckeditor.js"></script>
     <script>

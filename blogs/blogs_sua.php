@@ -58,7 +58,7 @@ require_once '../config.php';
             </div>
         </div>
         <hr>
-        <footer class="text-center">&copy Đặng Quốc Bảo - DTH205716</footer>
+        <?php include_once "../footer.php"; ?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

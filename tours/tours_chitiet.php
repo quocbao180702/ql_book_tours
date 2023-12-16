@@ -48,7 +48,9 @@ require_once '../thuvien.php';
         echo '</div>';
         ?>
     </div>
+    <?php include_once "../footer.php"; ?>
     </div>
+    
 </body>
 
 </html>
