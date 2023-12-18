@@ -1,12 +1,12 @@
 <?php
 require_once '../config.php';
 
-if (isset($_SESSION['ID'])&& isset($_SESSION['cart'])) {
-    $userID = isset($_SESSION['ID']);
+if (isset($_SESSION['ID']) && isset($_SESSION['cart'])) {
+    $userID = $_SESSION['ID'];
     $cart = $_SESSION['cart'];
 
-    $dienthoai = $_POST['dienthoai']; // Thay thông tin từ form hoặc nguồn khác
-    $diachi = $_POST['diachi']; // Thay thông tin từ form hoặc nguồn khác
+    $dienthoai = $_POST['dienthoai'];
+    $diachi = $_POST['diachi'];
 
     $sqlInsertOrder = "INSERT INTO donhang (user_id, dienthoaigiaohang, diachigiaohang) VALUES (:user_id, :dienthoai, :diachi)";
     $stmtOrder = $conn->prepare($sqlInsertOrder);
@@ -20,7 +20,7 @@ if (isset($_SESSION['ID'])&& isset($_SESSION['cart'])) {
     foreach ($cart as $item) {
         $sanphamID = $item['id'];
         $soluong = $item['quantity'];
-        $dongiaban = $_POST['Gia']; // Thay thông tin từ giỏ hàng hoặc nguồn khác
+        $dongiaban = $_POST['Gia'];
 
         $sqlInsertOrderDetail = "INSERT INTO donhang_chitiet (donhang_id, user_id, soluongban, dongiaban) VALUES (:donhang_id, :sanpham_id, :soluong, :dongiaban)";
         $stmtOrderDetail = $conn->prepare($sqlInsertOrderDetail);
@@ -31,13 +31,13 @@ if (isset($_SESSION['ID'])&& isset($_SESSION['cart'])) {
         $stmtOrderDetail->execute();
     }
 
+
     unset($_SESSION['cart']);
 
-    if(!isset($$_SESSION['cart'])){
+    if (!isset($$_SESSION['cart'])) {
         header("Location: /cart/cart_empty.php");
         exit();
-    }
-    else{
+    } else {
         header("Location: /cart/cart_empty.php");
     }
 } else {

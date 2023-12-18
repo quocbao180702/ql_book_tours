@@ -32,6 +32,7 @@ include_once 'config.php';
 								<li><a class="dropdown-item" href="/blogs/myBlogs.php"> Bài viết của tôi</a></li>
 								<li><a class="dropdown-item" href="/tours/tours_quanly.php"> Quản lý tour</a></li>
 								<li><a class="dropdown-item" href="/tours/tours_them.php"> Thêm tour</a></li>
+								<li><a class="dropdown-item" href="/nguoidung/nguoidung.php">Người Dùng</a></li>
 								<li>
 									<hr class="dropdown-divider">
 								</li>

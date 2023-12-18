@@ -53,7 +53,9 @@ require_once 'thuvien.php';
 <body>
 
     <div class="container">
-
+        <?php
+            var_dump('id la: ' .$_SESSION['ID']);
+        ?>
         <div class="row">
             <!-- Main content -->
             <main class="col-md-9-md-4">
